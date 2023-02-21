@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signin.css">
+    <title>GetFit</title>
+    <script>
+        function fun1() {
+            var cancel = document.getElementById("signin").style;
+            var cancel1 = document.getElementById("signup").style;
+            cancel1.display = "block";
+            cancel.display = "none";
+
+        }
+    </script>
+</head>
+
+<body style="align-items: center;"> 
+    <form action="/action_page.php" method="post" style="background-color:rgba(255,255,255,0.2);" id="signin">
+        <div class="imgcontainer">
+            <h2>Sign in</h2>
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="example@gmail.com" name="uname">
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Password" name="psw">
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+        <button type="submit">Signin</button>
+        
+        <div class="container">
+            <span class="psw">Forgot <a href="#">password?</a></span>
+            <button type="button" class="cancelbtn" onclick="fun1()">signup</button>
+        </div>
+
+        </div>
+        </div>
+    </form>
+
+    <form action="/action_page.php" method="post" style="background-color:rgba(255,255,255,0.2);" id="signup">
+        <div class="imgcontainer">
+            <h2>Sign up</h2>
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="example@gmail.com" name="uname">
+
+            <label for="uname"><b>Phone no</b></label>
+            <input type="text" placeholder="Mobile number.." name="uname">
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Password" name="psw">
+            <label for="psw"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Password" name="psw">
+
+            <button type="submit" onclick="log()">Signup</button>
+
+        </div>
+
+        <div class="container">
+            <button type="button" class="cancelbtn" id="cancel" onclick="javascript:window.close()">cancel</button>
+        </div>
+    </form>
+</body>
+
+</html>
